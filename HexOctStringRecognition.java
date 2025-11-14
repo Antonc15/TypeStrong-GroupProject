@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.AbstractMap.SimpleEntry;
 
 public class HexOctStringRecognition
 {
@@ -7,204 +6,192 @@ public class HexOctStringRecognition
 
     public static void main(String[] args)
     {
-        // Read string from user
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String userInput = input.nextLine();
-        input.close();
 
-        // Verify entry validity
-        boolean valid = isInputValidHexOrOct(userInput); 
+        boolean valid = isInputValidHexOrOct(userInput);
 
         if (valid)
         {
-            System.out.print("Your string is a valid Octinteger or Hexinteger!");
+            System.out.print("Your string is a valid Integer, Octinteger, or Hexinteger!");
         }
         else
         {
-            System.out.print("Your string is NOT a valid Octinteger or Hexinteger!");
+            System.out.print("Your string is NOT a valid Integer, Octinteger, or Hexinteger!");
         }
+
+        input.close();
     }
 
     private static boolean isInputValidHexOrOct(String entry)
     {
         runtimeEntry = entry;
-        return start();
+        return start(0);
     }
 
-    // Nodes
     private static boolean start(int i)
     {
-        return q0(i) || q1(i) || q2(i);
+        return q1(i) || q6(i) || q8(i);
     }
 
     private static boolean q1(int i)
     {
         if (isLastChar(i)) { return false; }
-
         char c = getChar(i);
-
         if (isChar(c, "0"))
         {
             return q2(i + 1);
         }
-
         return false;
     }
 
     private static boolean q2(int i)
     {
         if (isLastChar(i)) { return false; }
-
         char c = getChar(i);
-
         if (isChar(c, "0"))
         {
             return q3(i + 1);
         }
-
         return false;
     }
 
     private static boolean q3(int i)
     {
         if (isLastChar(i)) { return false; }
-
         char c = getChar(i);
-
         if (isChar(c, "_"))
         {
-            return q7(i + 1);
+            return q5(i + 1);
         }
-        
         if (isChar(c, "01234567"))
         {
             return q4(i + 1);
         }
-
         return false;
     }
 
     private static boolean q4(int i)
     {
-        if (isLastChar(i)) { return q14(i); }
-
+        if (isLastChar(i)) { return Accept(i); }
         char c = getChar(i);
-
         if (isChar(c, "_"))
         {
-            return q7(i + 1) || q14(i);
+            return q5(i + 1) || Accept(i);
         }
-
         if (isChar(c, "01234567"))
         {
-            return q4(i + 1) || q14(i);
+            return q4(i + 1) || Accept(i);
         }
-
         return false;
     }
 
     private static boolean q5(int i)
     {
         if (isLastChar(i)) { return false; }
-
         char c = getChar(i);
-
-        if (isChar(c, "0123456789"))
+        if (isChar(c, "01234567"))
         {
-            return q6(i + 1);
+            return q4(i + 1);
         }
-
         return false;
     }
 
     private static boolean q6(int i)
     {
-        if (isLastChar(i)) { return q14(i); }
-
+        if (isLastChar(i)) { return false; }
         char c = getChar(i);
-
         if (isChar(c, "0123456789"))
         {
-            return q6(i + 1) || q14(i);
+            return q7(i + 1);
         }
-
-        if (isChar(c, "_"))
-        {
-            return q5(i + 1) || q14(i);
-        }
-
         return false;
     }
 
     private static boolean q7(int i)
     {
-        if (isLastChar(i)) { return false; }
-
+        if (isLastChar(i)) { return Accept(i); }
         char c = getChar(i);
-
-        if (isChar(c, "01234567"))
+        if (isChar(c, "0123456789"))
         {
-            return q4(i + 1);
+            return q7(i + 1) || Accept(i);
         }
-
+        if (isChar(c, "_"))
+        {
+            return q6(i + 1) || Accept(i);
+        }
         return false;
     }
 
     private static boolean q8(int i)
     {
         if (isLastChar(i)) { return false; }
-
-        // State q8 logic goes here
+        char c = getChar(i);
+        if (isChar(c, "0"))
+        {
+            return q9(i + 1);
+        }
         return false;
     }
 
     private static boolean q9(int i)
     {
         if (isLastChar(i)) { return false; }
-
-        // State q9 logic goes here
+        char c = getChar(i);
+        if (isChar(c, "x"))
+        {
+            return q10(i + 1);
+        }
         return false;
     }
 
     private static boolean q10(int i)
     {
         if (isLastChar(i)) { return false; }
-
-        // State q10 logic goes here
+        char c = getChar(i);
+        if (isChar(c, "_"))
+        {
+            return q11(i + 1);
+        }
+        if (isChar(c, "0123456789ABCDEFabcdef"))
+        {
+            return q12(i + 1);
+        }
         return false;
     }
 
     private static boolean q11(int i)
     {
         if (isLastChar(i)) { return false; }
-
-        // State q11 logic goes here
+        char c = getChar(i);
+        if (isChar(c, "0123456789ABCDEFabcdef"))
+        {
+            return q12(i + 1);
+        }
         return false;
     }
 
     private static boolean q12(int i)
     {
-        if (isLastChar(i)) { return false; }
-
-        // State q12 logic goes here
-        return false;
-    }
-
-    private static boolean q13(int i)
-    {
-        if (isLastChar(i)) { return false; }
-
-        // State q13 logic goes here
+        if (isLastChar(i)) { return Accept(i); }
+        char c = getChar(i);
+        if (isChar(c, "0123456789ABCDEFabcdef"))
+        {
+            return q12(i + 1) || Accept(i);
+        }
+        if (isChar(c, "_"))
+        {
+            return q11(i + 1) || Accept(i);
+        }
         return false;
     }
 
     private static boolean Accept(int i)
     {
-        return true;
+        return (runtimeEntry != null) && (i >= runtimeEntry.length());
     }
 
-    // Helpers
     private static boolean isLastChar(int i)
     {
         return (runtimeEntry == null) || (i >= runtimeEntry.length());
@@ -212,31 +199,22 @@ public class HexOctStringRecognition
 
     private static char getChar(int i)
     {
-        if (s.length() <= 0)
-        {
-            return null;
-        }
-
-        char c = runtimeEntry.charAt(0);
-
-        return new SimpleEntry<>(true, c);
+        return runtimeEntry.charAt(i);
     }
 
     private static boolean isChar(char c, String compatible)
     {
-        if (compatible == null) 
+        if (compatible == null)
         {
             return false;
         }
-
-        for (int i = 0; i < compatible.length(); i++) 
+        for (int k = 0; k < compatible.length(); k++)
         {
-            if (c == compatible.charAt(i)) 
+            if (c == compatible.charAt(k))
             {
                 return true;
             }
         }
-
         return false;
     }
 }
