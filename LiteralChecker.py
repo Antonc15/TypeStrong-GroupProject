@@ -1,7 +1,7 @@
 from decInt import state1
 from hexInt import state3
 from octInt import state8
-
+from float import state13
 
 def state0(word, index):
     if state1(word, index):
@@ -9,6 +9,8 @@ def state0(word, index):
     elif state3(word, index):
         return True
     elif state8(word, index):
+        return True
+    elif state13(word, index):
         return True
     return False
 
