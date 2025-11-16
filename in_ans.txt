@@ -1,65 +1,65 @@
-111
-11_11
-0
-000
-00_00
-1234567890
-0x123abcdef
-0x123ABCDEF
-0x007
-0x_AaBb
-0x1_876
-0x1_7655c
-0x9_8765b
-0o123
-0o007
-0o_1111
-0o1_7655
-abc
-111_
-_111
-11__11
-_000
-000_
-00__00
-01234
-0b123
-_0x3999F
-0x39F9_
-0_x1234
-0x__9390
-0x12G
-0x12l
-0o1_876
-0o9_8765
-_0o3999
-0o3999_
-0_o1234
-0o__9390
-0oABC
-0oabc
-0E0
-0e0
-1.9090909
-1.09e-1239
-1.09e+02920
-1.90_09_0999
-0_1.1_0
-1_2e21_00
-_1e0
-1e0_
-1__1e0
-11.11.11
-1e0.1
-1e1e1
-1.3e1.2
-123e_123
-.123
-123.
-132e+_123
-132e-_123
-123.e12
-.123e12
-123e
-123e+
-123e-
+111 True
+11_11 True
+0 True
+000 True
+00_00 True
+1234567890 True
+0x123abcdef True
+0x123ABCDEF True
+0x007 True
+0x_AaBb True
+0x1_876 True
+0x1_7655c True
+0x9_8765b True
+0o123 True
+0o007 True
+0o_1111 True
+0o1_7655 True
+0E0 True
+0e0 True
+1.9090909 True
+1.09e-1239 True
+1.09e+02920 True
+1.90_09_0999 True
+0_1.1_0 True
+1_2e21_00 True
+.123 True
+123. True
+123.e12 True
+.123e12 True
+abc False
+111_ False
+_111 False
+11__11 False
+_000 False
+000_ False
+00__00 False
+01234 False
+0b123 False
+_0x3999F False
+0x39F9_ False
+0_x1234 False
+0x__9390 False
+0x12G False
+0x12l False
+0o1_876 False
+0o9_8765 False
+_0o3999 False
+0o3999_ False
+0_o1234 False
+0o__9390 False
+0oABC False
+0oabc False
+_1e0 False
+1e0_ False
+1__1e0 False
+11.11.11 False
+1e0.1 False
+1e1e1 False
+1.3e1.2 False
+123e_123 False
+132e+_123 False
+132e-_123 False
+123e False
+123e+ False
+123e- False
