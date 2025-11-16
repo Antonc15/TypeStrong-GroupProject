@@ -1,16 +1,16 @@
 from decInt import state1
-from hexInt import state3
-from octInt import state8
-from float import state13
+from hexInt import state6
+from octInt import state11
+from float import state16
 
 def state0(word, index):
     if state1(word, index):
         return True
-    elif state3(word, index):
+    elif state6(word, index):
         return True
-    elif state8(word, index):
+    elif state11(word, index):
         return True
-    elif state13(word, index):
+    elif state16(word, index):
         return True
     return False
 
