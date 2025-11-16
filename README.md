@@ -15,7 +15,8 @@
 ## ✅ Tasks Completed
 
 ### 1. Recognize Python Decimal Integers  
-🔗 [View File](#)  
+![decIntegerLiteralNFA](decIntegerLiteralNFA.jpg)
+🔗 [View File](https://github.com/Antonc15/TypeStrong-GroupProject/blob/main/decInt.py)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
 
