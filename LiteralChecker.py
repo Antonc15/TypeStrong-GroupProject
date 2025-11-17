@@ -63,7 +63,7 @@ with open("out.txt", "w") as outputFile:
                 if state1(string, 0):
                     print(f"Accepted decimal literal {string}")
                 else:
-                    print(f"Rejected decimal literal{string}")
+                    print(f"Rejected decimal literal {string}")
             #Hexadecimal Literal
             elif choice2 == "2":
                 if state6(string, 0):
