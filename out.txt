@@ -38,7 +38,7 @@ Rejected 01234
 Rejected 0b123
 Rejected _0x3999F
 Rejected 0x39F9_
-Rejected 0_x1234 (Accepted)
+Rejected 0_x1234
 Rejected 0x__9390
 Rejected 0x12G
 Rejected 0x12l

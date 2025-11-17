@@ -7,8 +7,10 @@ def state6(word, index):
         # Since state 6 isn't an accepting statement, return False.
         return False
 
+    # Gets the character of input at the specified index.
     char = word[index]
 
+    # Checks if the given character is a 0.
     if char == "0":
         return state7(word, index + 1)
 
@@ -20,9 +22,10 @@ def state7(word, index):
         # Since state 7 isn't an accepting statement, return False.
         return False
 
+    # Gets the character of input at the specified index.
     char = word[index]
-
-    if char == "x":
+    # Checks if the given character is an x or X.
+    if char == "x" or char == "X":
         return state8(word, index + 1)
 
     return False
@@ -33,10 +36,12 @@ def state8(word, index):
         # Since state 8 isn't an accepting statement, return False.
         return False
 
+    # Gets the character of input at the specified index.
     char = word[index]
-
+    # Checks if the given character is in hexDigits.
     if char in hexDigits:
         return state9(word, index + 1)
+    # Checks if the given character is an underscore.
     elif char == "_":
         return state10(word, index + 1)
 
@@ -46,12 +51,16 @@ def state8(word, index):
 def state9(word, index):
     #Checks if the given input has no more characters left.
     if index >= len(word):
+        # Since state 9 is an accepting state, return True.
         return True
 
+    # Gets the character of input at the specified index.
     char = word[index]
 
+    # Checks if the given character is in hexDigits.
     if char in hexDigits:
         return state9(word, index + 1)
+    # Checks if the given character is an underscore.
     elif char == "_":
         return state10(word, index + 1)
 
@@ -64,8 +73,10 @@ def state10(word, index):
         # Since state 10 isn't an accepting statement, return False.
         return False
 
+    # Gets the character of input at the specified index.
     char = word[index]
 
+    # Checks if the given character is in hexDigits.
     if char in hexDigits:
         return state9(word, index + 1)
 

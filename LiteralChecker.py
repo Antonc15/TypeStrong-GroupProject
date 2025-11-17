@@ -15,6 +15,7 @@ def state0(word, index):
         return True
     return False
 
+#Writes output into out.txt output file.
 with open("out.txt", "w") as outputFile:
     while True:
         #Asks users what input they want to enter.
