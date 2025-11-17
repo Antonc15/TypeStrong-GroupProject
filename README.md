@@ -15,7 +15,7 @@
 ## ✅ Tasks Completed
 
 ### 1. Recognize Python Decimal Integers  
-![decIntegerLiteralNFA](decIntegerLiteralNFA.jpg)
+![decIntegerLiteralNFA](screenshots/decIntegerLiteralNFA.jpg)
 🔗 [View File](https://github.com/Antonc15/TypeStrong-GroupProject/blob/main/decInt.py)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
@@ -23,6 +23,8 @@
 ---
 
 ### 2. Recognize Python Octal and Hexadecimal Integers  
+![decIntegerLiteralNFA](screenshots/hexIntegerLiteralNFA.jpg)
+![decIntegerLiteralNFA](screenshots/octIntegerLiteralNFA.jpg)
 🔗 [View File](#)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
@@ -30,6 +32,7 @@
 ---
 
 ### 3. Recognize Python Floating Point Literals  
+![decIntegerLiteralNFA](screenshots/floatLiteralNFA.jpg)
 🔗 [View File](#)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
