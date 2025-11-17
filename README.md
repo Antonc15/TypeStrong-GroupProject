@@ -25,7 +25,8 @@
 ### 2. Recognize Python Octal and Hexadecimal Integers  
 ![decIntegerLiteralNFA](screenshots/hexIntegerLiteralNFA.jpg)
 ![decIntegerLiteralNFA](screenshots/octIntegerLiteralNFA.jpg)
-🔗 [View File](#)  
+🔗 [View File Octal](https://github.com/Antonc15/TypeStrong-GroupProject/blob/main/octInt.py)  
+🔗 [View File Hexadecimal](https://github.com/Antonc15/TypeStrong-GroupProject/blob/main/hexInt.py)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
 
@@ -33,7 +34,7 @@
 
 ### 3. Recognize Python Floating Point Literals  
 ![decIntegerLiteralNFA](screenshots/floatLiteralNFA.jpg)
-🔗 [View File](#)  
+🔗 [View File](https://github.com/Antonc15/TypeStrong-GroupProject/blob/main/float.py)  
 - **Anton Clark:**  
 - **Angelica Ballin:**  
 
